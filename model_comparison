@@ -1,0 +1,133 @@
+# Model Comparison
+
+## Model 1: Marketing Spend Model
+
+### Variables Used
+
+Dependent Variable:
+
+* monthly_sales
+
+Independent Variable:
+
+* marketing_spend
+
+### Results
+
+* R² = 0.167
+* Coefficient = 2.13
+* P-value < 0.001
+
+### Business Interpretation
+
+Marketing spend has a positive relationship with monthly sales. Higher marketing investment is associated with higher sales performance. However, the model explains only a limited portion of sales variation.
+
+### Business Usefulness
+
+Useful for evaluating the effectiveness of marketing investments but insufficient as a standalone forecasting model.
+
+### Limitations
+
+Does not account for customer traffic, inventory levels, regional differences, or operational factors.
+
+## Model 2: Footfall Model
+
+### Variables Used
+
+Dependent Variable:
+
+* monthly_sales
+
+Independent Variable:
+
+* footfall
+
+### Results
+
+* R² = 0.736
+* Coefficient = 35.68
+* P-value < 0.001
+
+### Business Interpretation
+
+Customer traffic is strongly associated with monthly sales. Every additional customer contributes positively to sales performance.
+
+### Business Usefulness
+
+Highly useful because it explains a large portion of sales variation and directly relates to customer acquisition strategies.
+
+### Limitations
+
+Does not consider marketing activities, inventory availability, or regional characteristics.
+
+## Model 3: Inventory Availability Model
+
+### Variables Used
+
+Dependent Variable:
+
+* monthly_sales
+
+Independent Variable:
+
+* inventory_availability_pct
+
+### Results
+
+* R² = 0.013
+* P-value = 0.041
+
+### Business Interpretation
+
+Inventory availability has a positive but relatively weak relationship with monthly sales.
+
+### Business Usefulness
+
+Useful operational indicator but not a strong standalone predictor of sales.
+
+### Limitations
+
+Explains very little variation in sales.
+
+## Final Multiple Regression Model
+
+### Variables Used
+
+Dependent Variable:
+
+* monthly_sales
+
+Independent Variables:
+
+* marketing_spend
+* footfall
+* inventory_availability_pct
+* region dummy variables
+
+### Results
+
+* R² = 0.811
+
+### Significant Variables
+
+* marketing_spend
+* footfall
+* inventory_availability_pct
+* south region
+* west region
+
+### Business Interpretation
+
+The model explains approximately 81.1% of variation in monthly sales. Customer traffic, marketing investments, inventory availability, and regional differences are important drivers of sales performance.
+
+### Business Usefulness
+
+Most useful model for management decision-making because it combines multiple business drivers and provides the highest explanatory power.
+
+### Limitations
+
+Regression identifies associations rather than causation. External factors such as economic conditions, local events, competition, and seasonality may also influence sales.
+
+## Final Model Selection
+
+The Multiple Regression Model was selected because it provides the highest R² value, includes multiple significant business variables, and offers the strongest support for business decision-making.
